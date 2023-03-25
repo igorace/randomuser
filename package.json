@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.4",
+    "nuxt": "^3.3.2",
+    "nuxt-vitest": "^0.6.9"
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.13.0"
+  }
+}
