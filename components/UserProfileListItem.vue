@@ -35,22 +35,24 @@ function toggleFavorite() {
 </script>
 
 <template>
-  <div class="flex font-sans shadow-md p-2 border rounded-md grow">
-    <div class="flex-none w-32 relative">
+  <div
+    class="flex md:flex-row font-sans shadow-md p-2 border rounded-md grow flex-col"
+  >
+    <div class="flex justify-center">
       <img
         :src="user.picture.large"
         :alt="user.name.first"
-        class="absolute inset-0 w-full h-full rounded-xl object-cover"
+        class="rounded-md object-cover"
         loading="lazy"
       />
     </div>
-    <div class="flex-auto p-6">
-      <div class="flex flex-wrap items-center">
+    <div class="flex-auto p-6 sm:p-2">
+      <div class="flex items-center">
         <h1 class="flex-auto text-lg font-semibold text-slate-900">
           {{ user.name.first }} {{ user.name.last }}
         </h1>
         <button
-          class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200 hover:opacity-75"
+          class="flex-none flex items-center justify-center w-9 h-9 ml-2 rounded-md text-slate-300 border border-slate-200 hover:opacity-75"
           type="button"
           aria-label="Like"
           @click="toggleFavorite"
@@ -70,9 +72,6 @@ function toggleFavorite() {
         </button>
       </div>
       <div class="flex flex-col">
-        <span
-          >Email: <span class="font-bold">{{ user.email }}</span>
-        </span>
         <span
           >Age: <span class="font-bold">{{ user.dob.age }}</span>
         </span>
